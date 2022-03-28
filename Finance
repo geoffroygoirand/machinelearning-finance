@@ -1,0 +1,18 @@
+from keras.models import Sequential
+from keras.layers import LSTM
+from keras.layers import Dropout
+from keras.layers import Dense
+
+
+model = Sequential()
+model.add(LSTM(units=100,return_sequences=True,input_shape=(X_train.shape[1], 1)))
+model.add(Dropout(0.2))
+model.add(LSTM(units=100,return_sequences=True))
+model.add(Dropout(0.2))
+model.add(LSTM(units=100,return_sequences=True))
+model.add(Dropout(0.2))
+model.add(LSTM(units=100))
+model.add(Dropout(0.2))
+model.add(Dense(units=1))
+model.compile(optimizer='adam',loss='mean_squared_error')
+model.fit(X_train,y_train,epochs=200,batch_size=32)
