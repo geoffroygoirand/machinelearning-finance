@@ -1,0 +1,4 @@
+
+#Lire les données
+
+df = pd.read_csv("data/creditcard.csv")
