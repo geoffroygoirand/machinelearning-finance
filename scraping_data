@@ -1,0 +1,5 @@
+# Les liens vers les données à scraper 
+
+url_is = ‘https://finance.yahoo.com/quote/' + index + ‘/financials?p=’ + index
+url_bs = ‘https://finance.yahoo.com/quote/' + index +’/balance-sheet?p=’ + index
+url_cf = ‘https://finance.yahoo.com/quote/' + index + ‘/cash-flow?p=’+ index
